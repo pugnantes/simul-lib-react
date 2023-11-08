@@ -1,0 +1,50 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "18.2.0"
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": true,
+    "tsconfigRootDir": "__dirname"
+  },
+  "plugins": ["jsx-a11y"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:jsx-a11y/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+      "rules": {
+        "react/jsx-uses-react": "off",
+        "react/react-in-jsx-scope": "off",
+        "prefer-const": "warn",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/no-inferrable-types": "off",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-misused-promises": [
+          "warn",
+          {
+            "checksVoidReturn": {
+              "attributes": false
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
